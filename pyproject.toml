@@ -7,7 +7,25 @@ authors = [
     { name = "Ali Abdullah Nasiri", email = "nasiri.aliabdullah@gmail.com" }
 ]
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "alembic>=1.20.1",
+    "fastapi>=0.165.0",
+    "httpx>=0.28.1",
+    "numpy>=2.5.5",
+    "openai>=3.57.0",
+    "pandas>=3.1.1",
+    "psycopg[binary]>=3.3.9",
+    "pwdlib[argon2]>=0.4.2",
+    "pydantic>=2.14.4",
+    "pydantic-settings>=2.16.3",
+    "pyjwt>=2.15.1",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.9",
+    "structlog>=26.1.0",
+    "telethon>=1.46.0",
+    "tenacity>=9.2.1",
+    "uvicorn[standard]>=0.54.0",
+]
 
 [project.scripts]
 bot = "bot:main"
@@ -15,3 +33,12 @@ bot = "bot:main"
 [build-system]
 requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.6",
+]
