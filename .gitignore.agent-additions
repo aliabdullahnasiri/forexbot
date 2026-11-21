@@ -1,0 +1,19 @@
+# Append these entries to your existing .gitignore if not already included.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+*.session
+*.session-journal
+*.session-wal
+*.session-shm
+*.log
+claude.local.md
+CLAUDE.local.md
+AGENTS.override.md
